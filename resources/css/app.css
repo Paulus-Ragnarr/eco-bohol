@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --parimary-background: white;
+    --secondary-background: hsl(130, 37%, 32%);
+    --primary-text-color: black;
+    --accent-color: #f68003;
+    --accent-color-hover: #dd7709;
+
+    --primary-btn-color: rgb(19, 155, 69);
+    --primary-btn-hover-color: rgb(22, 163, 74);
+
+    font-family: Helvetica, sans-serif;
+}
+
+h1 {
+    color: rgb(24, 97, 15);
+}
+
+h6 {
+    @apply text-gray-600;
+}
+
+.primary-btn {
+    @apply py-2 px-2 rounded-md shadow-md text-sm md:text-base;
+    background-color: var(--accent-color);
+    color: white;
+}
+.primary-btn:hover {
+    background-color: var(--accent-color-hover);
+}
+
+.mangrove-search-btn {
+    @apply py-2 px-8 rounded-r-md shadow-md text-sm md:text-base;
+    background-color: var(--primary-btn-color);
+    color: white;
+}
+.mangrove-search-btn:hover {
+    background-color: var(--primary-btn-hover-color);
+}
+
+.secondary-btn {
+    @apply w-full bg-gray-500 text-white rounded-md shadow-md hover:bg-gray-600 flex justify-center items-center py-1;
+}
+
+/* input {
+    @apply bg-gray-100;
+} */
+
+.login-input {
+    @apply  w-full p-2 focus:outline focus:outline-green-400 bg-gray-100 border-2 border-gray-100 rounded-md shadow-md;
+    /* background-color: var(--secondary-background); */
+}
+
+.nav-item {
+    @apply px-5 py-2 hover:bg-gray-900/25;
+}
+
+.nav-item a {
+    @apply flex items-center;
+}
+
+hr {
+    border-top: 1px solid rgb(212, 212, 212);
+}
+
+.active {
+    @apply bg-gray-900/50 px-4;
+    border-left: 5px solid var(--accent-color);
+}
+
+.common-background {
+    background-color: var(--parimary-background);
+    color: var(--primary-text-color);
+}
+
+.secondary-background {
+    background-color: var(--secondary-background);
+}
+
+.summary-item {
+    @apply p-2 flex flex-col justify-center items-center rounded-md shadow border cursor-pointer;
+    /* color: white; */
+}
+
+.side-menu {
+    background-color: var(--secondary-background);
+    color: white;
+}
+
+
+.common-input {
+    @apply p-2 border rounded-md text-black focus:outline-none  focus:border-green-500 bg-gray-100 disabled:bg-green-50;
+}
+
+.filter-map-select {
+    @apply p-2 rounded-md text-black focus:outline-none  focus:border-green-500 disabled:bg-green-50 border-0 bg-gray-500/50;
+}
+tbody tr {
+    @apply hover:bg-green-50;
+}
+
+
+
+
+
+
+/* Home screen styles */
+.home-nav-link {
+    @apply hover:text-green-200 cursor-pointer text-xs md:text-sm lg:text-base;
+}
+
+
+#home {
+    background-image: url('/static/img/anton-lecock-LEpilI_K4fs-unsplash.jpg');
+    filter: brightness(80%);
+}
+
+#projects {
+    /* background-image: url('/static/img/deni-febriliyan-hjTtgTCIsHI-unsplash.jpg'); */
+    /* filter: brightness(80%); */
+}
+
+/* #research {
+    background-image: url('/static/img/pexels-alesia-gritsuk-5595613.jpg');
+    filter: brightness(80%);
+} */
+
+.project_learn_more {
+    @apply px-2 py-1 rounded-md;
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.project_learn_more:hover {
+    background-color: var(--accent-color-hover);
+}
+
+.browse_more {
+    @apply px-2 py-3 rounded-md;
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.browse_more:hover {
+    background-color: var(--accent-color-hover);
+}
+
+/* Search Species styles */
+.search-species-header {
+    @apply bg-green-900;
+}
+
+.search-species-primary-btn {
+    @apply py-1 px-3 rounded-md shadow-md text-sm md:text-base;
+    background-color: white;
+    color: rgb(57, 68, 57);
+}
+.search-species-primary-btn:hover {
+    /* background-color: green; */
+    @apply shadow-lg;
+}
+
+/* .search-species-side-menu {
+} */
+
+a.disabled {
+    pointer-events: none;
+    color: #ccc;
+}
+
+#report-print {
+    @apply flex h-screen overflow-y-auto justify-center bg-gray-200 py-5 mt-2;
+}
+.report-paper-styles {
+    @apply bg-white px-5 py-10;
+}
+.report-paper {
+    @apply flex flex-col;
+    height: 1200px;
+    width: 1000px;
+}
+
+.report-main {
+    @apply w-full;
+}
+
+/* .report-details{
+    @apply w-4/5;
+} */
+.report-details-input {
+    @apply w-full flex items-center;
+}
+.report-details-label {
+    @apply font-bold text-sm;
+}
+.report-details-value {
+    /* @apply w-full border-b border-black flex-1 px-2 py-0; */
+    @apply w-full flex-1 px-2 py-0 text-sm;
+}
+
+.manage-maps-input {
+    @apply py-2 pl-1 border border-green-600 rounded-md w-10/12;
+}
+
+.manage-maps-input:disabled {
+    @apply bg-white border-0;
+}
+
+.manage-maps-location-input {
+    @apply py-2 pl-1 border border-green-600 rounded-md w-10/12;
+}
+
+.manage-maps-location-input:disabled {
+    @apply border-0;
+}
+.manage-maps-select:disabled {
+    @apply bg-white border-0 text-black;
+}
+
+
+
+/* Format Tables */
+.report-table {
+    @apply border border-black
+}
+
+.report-table th {
+    @apply border border-black text-black
+}
+
+.report-table td {
+    @apply border border-black text-black
+}
+
+
+
+.nat-gradient {
+    @apply rounded-md;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00ffff+0,003fff+22,0000bf+51,7f003f+79,ff0000+100 */
+background: rgb(0,255,255); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(0,255,255,1) 0%, rgba(0,63,255,1) 22%, rgba(0,0,191,1) 51%, rgba(127,0,63,1) 79%, rgba(255,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(0,255,255,1) 0%,rgba(0,63,255,1) 22%,rgba(0,0,191,1) 51%,rgba(127,0,63,1) 79%,rgba(255,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(0,255,255,1) 0%,rgba(0,63,255,1) 22%,rgba(0,0,191,1) 51%,rgba(127,0,63,1) 79%,rgba(255,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffff', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 */
+
+}
+
+.plan-gradient {
+    @apply rounded-md;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffff00+0,3fff00+25,00bf00+51,f2ad00+79,ff0000+100 */
+background: rgb(255,255,0); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(255,255,0,1) 0%, rgba(63,255,0,1) 25%, rgba(0,191,0,1) 51%, rgba(242,173,0,1) 79%, rgba(255,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(255,255,0,1) 0%,rgba(63,255,0,1) 25%,rgba(0,191,0,1) 51%,rgba(242,173,0,1) 79%,rgba(255,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(255,255,0,1) 0%,rgba(63,255,0,1) 25%,rgba(0,191,0,1) 51%,rgba(242,173,0,1) 79%,rgba(255,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 */
+
+}
